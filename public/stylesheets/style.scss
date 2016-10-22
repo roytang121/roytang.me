@@ -52,8 +52,9 @@ $pinterest-red: #B50D22;
   font-size: $sizeValue + rem;
 }
 
-
-html { font-size: 100%; }
+html {
+	font-size: 100%;
+}
 
 body {
 	@include font-size(1);
@@ -90,9 +91,14 @@ h3 {
 #headline {
 	font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue";
 	color: $font-light;
-	padding: 0 0 100px 0;
+	padding: 0 0 60px 0;
 	opacity: 0.5;
 
+}
+
+#profile-icon {
+	height: 120px;
+	border-radius: 100px;
 }
 
 .info-icon {
@@ -163,7 +169,7 @@ h3 {
   top: -50%;
   left: -50%;
   width: 200%;
-  height: 130%;
+  height: 140%;
   z-index: -1000;
 }
 
@@ -183,6 +189,7 @@ h3 {
 
 .timeline-wrapper {
 	position: relative;
+	padding-bottom: 100px;
 }
 
 .timeline-stroke {
