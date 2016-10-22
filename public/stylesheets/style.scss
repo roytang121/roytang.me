@@ -1,0 +1,247 @@
+@import "settings";
+@import "foundation";
+
+// passing true to enable flexbox mode
+@include foundation-everything(true);
+
+// Browser Prefixes
+@mixin transform($transforms) {
+	-webkit-transform: $transforms;
+	-moz-transform: $transforms;
+	-ms-transform: $transforms;
+	transform: $transforms;
+}
+
+// Rotate
+@mixin rotate ($deg) {
+	@include transform(rotate(#{$deg}deg));
+}
+
+// Scale
+@mixin scale($scale) {
+	@include transform(scale($scale));
+}
+
+// Translate
+@mixin translate ($x, $y) {
+	@include transform(translate($x, $y));
+}
+
+// Skew
+@mixin skew ($x, $y) {
+	@include transform(skew(#{$x}deg, #{$y}deg));
+}
+
+// Transform Origin
+@mixin transform-origin ($origin) {
+    	-webkit-transform-origin: $origin;
+    	-moz-transform-origin: $origin;
+	-ms-transform-origin: $origin;
+	transform-origin: $origin;
+}
+
+$background-grey: #F3F3F3;
+$browser-default-font-size: 16px;
+$font-dark: #4A4A4A;
+$font-light: #9B9B9B;
+$timeline-stroke-color: #9B9B9B;
+$pinterest-red: #B50D22;
+
+@mixin font-size($sizeValue: 1.6) {
+  font-size: ($sizeValue * 10) + px;
+  font-size: $sizeValue + rem;
+}
+
+
+html { font-size: 100%; }
+
+body {
+	@include font-size(1);
+  padding: 0px;
+  font: 16px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: #FFFFFF;
+	color: $font-dark;
+}
+
+p {
+	@include font-size(1);
+	color: font-dark;
+}
+
+h1 {
+	clear: both;
+	@include font-size(2);
+	font-weight: bold;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	letter-spacing: 2px;
+	color: $font-dark;
+	text-align: center;
+}
+
+h2 {
+	color: $font-dark;
+}
+
+h3 {
+	color: $font-dark;
+}
+
+#headline {
+	font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue";
+	color: $font-light;
+	padding: 0 0 100px 0;
+	opacity: 0.5;
+
+}
+
+.info-icon {
+	height: 80px;
+}
+
+.self-description-view {
+	padding: 64px 0 64px 0;
+}
+
+.self-description-view > .col-left {
+
+	@media #{$small-only} {
+		text-align: center;
+	}
+
+	@media #{$medium-up} {
+		text-align: right;
+	}
+}
+
+.self-description-view > .col-left > p {
+	font-weight: bold;
+}
+
+.self-description-view > .col-right {
+	@media #{$small-only} {
+		text-align: center;
+	}
+
+	@media #{$medium-up} {
+		text-align: left;
+	}
+}
+
+.self-description-view > .col-right > p {
+	font-weight: normal;
+	color: $font-light;
+}
+
+.container {
+  padding: 0px;
+  overflow: hidden;
+}
+
+.oblique-parent {
+  position: relative;
+  overflow: visible;
+}
+
+.oblique {
+  @include rotate(-7);
+  background-color: $background-grey;
+  position: absolute;
+
+  top: -6%;
+	left: -50%;
+  width: 200%;
+  height: 110%;
+  z-index: -1000;
+}
+
+#oblique-header {
+  padding-top: 50px;
+}
+
+#oblique-header > .oblique {
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 130%;
+  z-index: -1000;
+}
+
+/* timeline */
+.title-label {
+	background-color: #D8D8D8;
+	padding-top: 10px;
+	padding-left: 33px;
+	padding-right: 33px;
+	padding-bottom: 10px;
+	border-radius: 4px;
+	font-weight: bold;
+	@include font-size(1.1);
+	color: $font-dark;
+	margin: 0 auto;
+}
+
+.timeline-wrapper {
+	position: relative;
+}
+
+.timeline-stroke {
+	width: 2px;
+	background-color: $timeline-stroke-color;
+	display: block;
+	position: relative;
+}
+
+.timeline-item {
+
+}
+
+.timeline-item > h2 {
+	@include font-size(1);
+	font-weight: bold;
+}
+
+.timeline-item > p {
+	@include font-size(0.9);
+	@color: $font-dark;
+	line-height: 20px;
+}
+.red-dot {
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	background: $pinterest-red;
+	left: -10px;
+	border-radius: 20px;
+}
+
+#education {
+	position: absolute;
+	left: 60px;
+	top: 45px;
+	width: 400px;
+}
+
+#experience-sensbeat {
+	position: absolute;
+	top: 45px;
+	right: 60px;
+	text-align: right;
+	width: 400px;
+}
+
+#experience-plugnplay {
+	position: absolute;
+	top: 240px;
+	left: 60px;
+	text-align: left;
+	width: 400px;
+}
+
+#experience-vivivit {
+	position: absolute;
+	top: 416px;
+	right: 60px;
+	text-align: right;
+	width: 400px;
+}

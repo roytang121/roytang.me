@@ -1,0 +1,21 @@
+{
+  "name": "roytang.me",
+  "description": "",
+  "main": "app.js",
+  "authors": [
+    "Roy Tang <me@roytang.me>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "foundation-sites": "^6.2.3"
+  }
+}
