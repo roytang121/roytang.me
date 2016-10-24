@@ -10,7 +10,8 @@ gulp.task('scss', function() {
   return gulp.src('./public/stylesheets/style.scss')
     .pipe(sass({
       includePaths: [
-        './bower_components/foundation-sites/scss'
+        './bower_components/foundation-sites/scss',
+        './bower_components/components-font-awesome/scss'
       ]
     }).on('error', sass.logError))
     .pipe(concat('style.css'))

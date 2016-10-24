@@ -1,25 +1,50 @@
 extends layout
 
 block content
+  div#sticky-header-container
+    div#sticky-header
+    
   div.container
-    div.row.align-center.oblique-parent#oblique-header
-      div.column.small-12.align-center
-        p.text-center#headline Two roads diverged in a wood,
-      img(src="/images/facebook_profile_compressed.png")#profile-icon
-      div.oblique
+    div.row#profile-header
+      div.column.small-12.large-6
+        h1 I'm 
+          strong Roy Tang
+          | , a 
+          strong developer 
+          | based in Hong Kong.
+        div.small-12.large-12.social-media-container
+          a(href="https://github.com/roytang121", target="_blank")
+            i.fa.fa-github.fa-2x
+          a(href="https://medium.com/@yipyipisyip", target="_blank")
+            i.fa.fa-medium.fa-2x
+          a(href="https://twitter.com/roytang121", target="_blank")
+            i.fa.fa-twitter.fa-2x
+          a(href="https://facebook.com/lerry.rowy", target="_blank")
+            i.fa.fa-facebook.fa-2x
+          a(href="https://hk.linkedin.com/in/roytang121", target="_blank")
+            i.fa.fa-linkedin.fa-2x
+    //- div.row.align-center.oblique-parent#oblique-header
+    //-   div.column.small-12.align-center
+    //-     p.text-center#headline Two roads diverged in a wood,
+    //-   img(src="/images/facebook_profile_compressed.png")#profile-icon
+    //-   div.oblique
+    //-   
       
-      
-    div.row.small-8.medium-6.align-spaced
-      div.column.small-12.align-center
-        h1 ROY TANG
-      div
-        img(src="/images/developer.png").info-icon
-      div 
-        img(src="/images/swift.png").info-icon
-      div
-        img(src="/images/hongkonger.png").info-icon
+    //- div.row.small-8.medium-6.align-spaced
+    //-   div
+    //-     img(src="/images/developer.png").info-icon
+    //-   div 
+    //-     img(src="/images/swift.png").info-icon
+    //-   div
+    //-     img(src="/images/hongkonger.png").info-icon
         
     div.row.align-center.self-description-view
+      div.row#info-icon-container.small-12.align-center
+        div
+          img(src="/images/developer.png").info-icon
+          img(src="/images/swift.png").info-icon
+          img(src="/images/hongkonger.png").info-icon
+        
       div.column.small-12.medium-4.col-left
         p Hello, I am Roy Tang.
           br
@@ -31,7 +56,7 @@ block content
           |expected to graduate in 2017
   
       div.column.small-12.medium-3.col-right
-        p Co-founder of Sensbeat Ltd, a Hong Kong local social media startup.
+        p Co-founding team member of Sensbeat, a Hong Kong local social media startup.
           br
           br
           |With 3 years experience of developing iOS application, I participated in serveral business projects in U.S, Japan, Hong Kong and China.
@@ -40,7 +65,7 @@ block content
           |Currently working as a remote iOS mobile developer for a fast growing startup based in Japan.
           
       div.column.small-12.medium-3.col-right
-        p I also an amateur 3D artists, full stack developer, photographer.
+        p I am also an amateur 3D artists, full stack developer, photographer.
           br
           br
           |I like Japanese culture 🇯🇵 and do speak some Japanese (N4).
@@ -74,7 +99,7 @@ block content
               br
               | Hong Kong
             p 
-              | 2012 - 2017
+              | 2012 - 2016
               br
               | Co-founding team member
               br
@@ -100,14 +125,24 @@ block content
               br
               | Tokyo, Japan
             p 
-              | 2012 - Present
+              | 2016 - Present
               br
               | iOS Software Engineer
-              
       div.row.small-12.align-center
         span.title-label Projects
       div.oblique
       
     div.row.align-center
       div.column.small-12.align-center
-          h1 PROJECTS
+        h1 PROJECTS
+        p TBD
+          
+    div.row.align-center.oblique-parent
+      div.column.small-12.align-center
+        h1 SKILLS
+      div.oblique
+        
+          
+    div.row.align-center
+      div.column.small-12.align-center
+        h1 CONTACTS
