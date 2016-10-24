@@ -5585,7 +5585,10 @@ h3 {
 
 .info-icon {
   height: 80px;
-  padding: 0 30px 0 30px; }
+  padding: 0 20px 0 20px; }
+  @media screen and (min-width: 40em) {
+    .info-icon {
+      padding: 0 40px 0 40px; } }
 
 .self-description-view {
   padding: 64px 0 64px 0; }
