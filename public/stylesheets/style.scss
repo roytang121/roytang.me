@@ -280,22 +280,6 @@ h3 {
 	padding-bottom: 100px;
 }
 
-.timeline-wrapper > .row {
-	@include breakpoint(large) {
-		justify-content: center;
-	}
-
-	@include breakpoint(medium down) {
-		padding-left: 20px;
-	}
-}
-
-.timeline-wrapper .timeline-stroke {
-	@include breakpoint(medium down) {
-		left: 16px;
-	}
-}
-
 .timeline-stroke {
 	width: 2px;
 	background-color: $timeline-stroke-color;
@@ -357,8 +341,25 @@ h3 {
 	width: 400px;
 }
 
+
+.timeline-wrapper > .row {
+	@include breakpoint(medium up) {
+		justify-content: center;
+	}
+
+	@include breakpoint(small only) {
+		padding-left: 20px;
+	}
+}
+
+.timeline-wrapper .timeline-stroke {
+	@include breakpoint(small only) {
+		left: 16px;
+	}
+}
+
 .timeline-wrapper .timeline-item, #education, #experience-sensbeat, #experience-vivivit, #eduation, #experience-plugnplay {
-	@include breakpoint(medium down) {
+	@include breakpoint(small only) {
 		left: 30px;
 		text-align: left;
 	}
