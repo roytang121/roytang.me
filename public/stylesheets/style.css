@@ -5628,16 +5628,12 @@ h3 {
   overflow: visible; }
 
 .oblique {
-  -webkit-transform: rotate(-7deg);
-  -moz-transform: rotate(-7deg);
-  -ms-transform: rotate(-7deg);
-  transform: rotate(-7deg);
   background-color: #F3F3F3;
   position: absolute;
-  top: -6%;
-  left: -50%;
-  width: 200%;
-  height: 110%;
+  top: 0;
+  left: -10%;
+  width: 120%;
+  height: 100%;
   z-index: -1000; }
 
 #oblique-header {
@@ -5745,12 +5741,23 @@ h3 {
   font-weight: bold;
   font-size: 11px;
   font-size: 1.1rem;
-  color: #4A4A4A;
-  margin: 0 auto; }
+  color: #4A4A4A; }
 
 .timeline-wrapper {
   position: relative;
   padding-bottom: 100px; }
+
+@media screen and (min-width: 64em) {
+  .timeline-wrapper > .row {
+    justify-content: center; } }
+
+@media screen and (max-width: 63.9375em) {
+  .timeline-wrapper > .row {
+    padding-left: 20px; } }
+
+@media screen and (max-width: 63.9375em) {
+  .timeline-wrapper .timeline-stroke {
+    left: 16px; } }
 
 .timeline-stroke {
   width: 2px;
@@ -5803,3 +5810,8 @@ h3 {
   right: 60px;
   text-align: right;
   width: 400px; }
+
+@media screen and (max-width: 63.9375em) {
+  .timeline-wrapper .timeline-item, #education, #experience-sensbeat, #experience-vivivit, #eduation, #experience-plugnplay {
+    left: 30px;
+    text-align: left; } }

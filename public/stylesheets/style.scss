@@ -144,15 +144,20 @@ h3 {
 }
 
 .oblique {
-  @include rotate(-7);
+  // @include rotate(-7);
   background-color: $background-grey;
   position: absolute;
 
-  top: -6%;
-	left: -50%;
-  width: 200%;
-  height: 110%;
-  z-index: -1000;
+  // top: -6%;
+	// left: -50%;
+  // width: 200%;
+  // height: 110%;
+  // z-index: -1000;
+	top: 0;
+	left: -10%;
+	width: 120%;
+	height: 100%;
+	z-index: -1000;
 }
 
 #oblique-header {
@@ -268,12 +273,27 @@ h3 {
 	font-weight: bold;
 	@include font-size(1.1);
 	color: $font-dark;
-	margin: 0 auto;
 }
 
 .timeline-wrapper {
 	position: relative;
 	padding-bottom: 100px;
+}
+
+.timeline-wrapper > .row {
+	@include breakpoint(large) {
+		justify-content: center;
+	}
+
+	@include breakpoint(medium down) {
+		padding-left: 20px;
+	}
+}
+
+.timeline-wrapper .timeline-stroke {
+	@include breakpoint(medium down) {
+		left: 16px;
+	}
 }
 
 .timeline-stroke {
@@ -335,4 +355,11 @@ h3 {
 	right: 60px;
 	text-align: right;
 	width: 400px;
+}
+
+.timeline-wrapper .timeline-item, #education, #experience-sensbeat, #experience-vivivit, #eduation, #experience-plugnplay {
+	@include breakpoint(medium down) {
+		left: 30px;
+		text-align: left;
+	}
 }
