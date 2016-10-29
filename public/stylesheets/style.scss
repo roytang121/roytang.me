@@ -69,6 +69,15 @@ h2 {
 
 h3 {
 	color: $font-dark;
+  font-weight: 500;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.column-no-gutter {
+  @extend .column;
+  padding: 0px;
+  margin: 0px
 }
 
 #headline {
@@ -120,7 +129,7 @@ h3 {
 
 .self-description-view > .col-right {
 	@media #{$small-only} {
-		text-align: center;
+		text-align: left;
 	}
 
 	@media #{$medium-up} {
@@ -341,7 +350,6 @@ h3 {
 	width: 400px;
 }
 
-
 .timeline-wrapper > .row {
 	@include breakpoint(medium up) {
 		justify-content: center;
@@ -364,3 +372,63 @@ h3 {
 		text-align: left;
 	}
 }
+
+
+/*** Projects related ***/
+.project_container {
+  // border: 0.1px solid #ccc;
+  padding-bottom: 80px;
+
+  @include breakpoint(small only) {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  @include breakpoint(medium up) {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+  border-radius: 4px;
+  position: relative;
+}
+
+.project-cover-container {
+  padding-bottom: 40px;
+}
+.project-cover {
+  width: 100%;
+}
+
+.img-caption {
+  text-align: center;
+  font-weight: 300;
+  font-style: normal;
+  @include font-size(0.9);
+  color: rgba(0, 0, 0, .6);
+  line-height: 1.4;
+  padding: 10px;
+}
+
+.quote {
+  text-align: center;
+  @include font-size(1.1);
+  color: $font-light;
+  font-style: italic;
+}
+
+.project_container .label {
+  margin-right: 8px;
+  border-radius: 4px;
+}
+
+/** iPhone mock related  **/
+.iphone-container {
+  position: relative;;
+}
+//
+// .iphone-screen {
+//   position: absolute;
+//   top:11.5%;
+//   left:6%;
+//   width: 88%;
+// }
