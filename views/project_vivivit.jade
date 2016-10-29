@@ -4,7 +4,7 @@ div.column-no-gutter.small-12.medium-12.large-12
     p.img-caption Be like a japanese, be like Vivivit
     
   div.column.project_container
-    div.column.small-12.large-12
+    div.column.small-12.large-12.collapsible(data-collapsed="collapse")
       h3 Vivivit - Tokyo, Japan
       p I have been dreaming to work in Japan since my high school. Shortly after I graduated from my lovely Startup, I joined <strong>Vivivit</strong> <abbr>株式会社ビビビット</abbr> as an intern iOS mobile developer and started working in Tokyo Japan.
       p Working in Japan is an entire new experience for me - the culture, environment, and <em>people</em>. 
@@ -27,11 +27,14 @@ div.column-no-gutter.small-12.medium-12.large-12
         | Layout elements have never been so reusable, flexable (everything is dynamic height!!) and extensible with such promising performance. It comes with a relatively deep learning curve, inevitably, but what
         | it returns are with no doubts worth spending a day or two to study a new way for managing views in iOS.
       
-      div.column.small-12
-      <div class="css-device css-device--mobile">
-      <img class="css-device__image" src="images/vivivit_screen_1.png">
-      </div>
-      br
+    div.column-flex.small-12.collapsible-control.align-right
+      button.button(type="button").pin Read more...
+    br
+    div.column.small-12
+    <div class="css-device css-device--mobile">
+    <img class="css-device__image" src="images/vivivit_screen_1.png">
+    </div>
+    br
       
     div.column.small-12
       span.secondary.label iOS

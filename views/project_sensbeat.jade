@@ -4,7 +4,7 @@ div.column-no-gutter.small-12.medium-12.large-12
     p.img-caption Sensbeat team are cool kids
     
   div.column.project_container
-    div.column.small-12.large-12
+    div.column.small-12.large-12.collapsible(data-collapsed="collapse")
       h3 Sensbeat - Startup
       p I joined Sensbeat team when I was just year one in university. All my stories begin from <strong>Sensbeat</strong>. It is, and will always be, the most important memory in my life.
       p.quote “Two road diverged in a wood and i took the one less traveled by and that has made all the difference.”
@@ -32,7 +32,10 @@ div.column-no-gutter.small-12.medium-12.large-12
         | entirely developed in <strong>Swift</strong>. 
         
       p OMV leveraged heavily on AVFoudation framework which is built with iOS SDK, as well as GPUImage, Alamofire, PromiseKit, and a number of open source libraries.
-
+      
+    div.column-flex.small-12.collapsible-control.align-right
+      button.button(type="button").pin Read more...
+    br
     div.column.small-12
     <div class="css-device css-device--mobile">
     <img class="css-device__image" src="images/omv_screen_2.jpg">
@@ -50,3 +53,4 @@ div.column-no-gutter.small-12.medium-12.large-12
       span.secondary.label Swift
       span.secondary.label Silicon Valley
     hr
+  

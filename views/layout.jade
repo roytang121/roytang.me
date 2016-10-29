@@ -6,5 +6,18 @@ html
     link(rel="stylesheet" href="/stylesheets/iosdevices.min.css" type="text/css")
     meta(name="viewport" content="width=device-width")
     link(href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700", rel="stylesheet")
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js")
   body
     block content
+    
+    script(type="text/javascript").
+      $('.collapsible-control').click(function(e) {
+        e.preventDefault();
+        console.log($(this).prev(".collapsible"));
+        
+        var block = $(this).prev(".collapsible[data-collapsed='collapse']");
+        
+        $(block).attr("data-collapsed", "expand");
+        $(this).fadeOut();
+        //- $(this).prev(".collapsible").hide();
+      });
