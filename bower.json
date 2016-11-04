@@ -17,6 +17,7 @@
   ],
   "dependencies": {
     "foundation-sites": "^6.2.4",
-    "components-font-awesome": "^4.6.3"
+    "components-font-awesome": "^4.6.3",
+    "masonry": "^4.1.1"
   }
 }
